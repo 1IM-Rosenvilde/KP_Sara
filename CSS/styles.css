@@ -74,10 +74,22 @@ header nav ul li a:hover {
 
 
 /* Prosjekter */
-#projects_container{
+#projects_container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
 }
+
+
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+  max-width: 48%;
+}
+
 
 
 #projects {
@@ -98,8 +110,8 @@ header nav ul li a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  max-width: 500px; 
-  margin: 0 auto 20px auto; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -168,4 +180,11 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+  .left, .main, .right {
+    width: 100%;
+  }
 }
